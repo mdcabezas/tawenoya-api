@@ -1,0 +1,42 @@
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file: .env
+    depends_on:
+      - postgres
+      - seaweedfs
+    volumes:
+      - ./src:/app/src
+    restart: unless-stopped
+
+  postgres:
+    image: postgis/postgis:16-3.4
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: tawenoya
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+
+  seaweedfs:
+    image: chrislusf/seaweedfs
+    ports:
+      - "8333:8333"
+      - "9333:9333"
+      - "8888:8888"
+    volumes:
+      - seaweedfs-data:/data
+    entrypoint: /bin/sh
+    command: >
+      -c "weed server -s3 -s3.config /etc/seaweedfs/config.json"
+    environment:
+      - weedfiler_dir=/data
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  seaweedfs-data:

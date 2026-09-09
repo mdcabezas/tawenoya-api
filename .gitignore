@@ -1,0 +1,104 @@
+# ==================
+# Dependencias
+# ==================
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnp
+.pnp.js
+
+# ==================
+# Builds y Salida
+# ==================
+dist/
+build/
+out/
+*.tsbuildinfo
+esbuild.json
+next-env.d.ts
+
+# ==================
+# Entorno
+# ==================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+.env.container
+.env.*
+
+# ==================
+# OpenAPI/Swagger Generados
+# ==================
+# Ignorar archivos generados de OpenAPI/Swagger
+swagger.json
+openapi.json
+swagger.yaml
+openapi.yaml
+swagger-output.json
+openapi-output.json
+# Directorios de generación de documentación
+swagger-ui/
+openapi-ui/
+docs/
+api-docs/
+
+# ==================
+# OpenSpec/OpenCode Locales
+# ==================
+# Ignorar archivos y directorios locales de OpenSpec/OpenCode
+.opencode/
+.openspec/
+*.spec.local
+*.plan.local
+opencode.local.json
+openspec.local.json
+# Ignorar archivos de configuración específicos de sesiones
+.opencode-session/
+.openspec-session/
+
+# ==================
+# Logs y Bases de Datos
+# ==================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.sqlite
+*.db
+
+# ==================
+# Editor/Directores
+# ==================
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# ==================
+# Sistema Operativo
+# ==================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==================
+# Diversos
+# ==================
+*.local
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.coverage
+coverage/
+.nyc_output/
+*.zip
+*.tar.gz

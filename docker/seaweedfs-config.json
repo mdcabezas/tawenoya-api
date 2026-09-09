@@ -1,0 +1,25 @@
+{
+  "identities": [
+    {
+      "name": "anonymous",
+      "actions": [
+        "Read"
+      ]
+    },
+    {
+      "name": "tawenoya-api",
+      "credentials": [
+        {
+          "accessKey": "tawenoya",
+          "secretKey": "tawenoya-secret"
+        }
+      ],
+      "actions": [
+        "Admin",
+        "Read",
+        "List",
+        "Write"
+      ]
+    }
+  ]
+}
